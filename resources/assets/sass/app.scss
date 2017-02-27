@@ -1,0 +1,42 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "text-stroke";
+
+
+.useravatar
+{
+  max-width: 128px;
+  max-height: 128px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.text-overflow-ellipsis
+{
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin linear-gradient($args...) {
+  background-image: -o-linear-gradient($args);
+  background-image: -moz-linear-gradient($args);
+  background-image: -webkit-linear-gradient($args);
+  background-image: linear-gradient($args);
+}
+
+@for $i from 0 through 200 {
+  .button-color-perc-#{$i} {
+    @include linear-gradient(to left, green, green #{$i/2}#{'%'}, red #{$i/2}#{'%'}, red);
+  }
+}
