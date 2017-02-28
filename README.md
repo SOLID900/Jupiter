@@ -1,13 +1,9 @@
 # Jupiter
 Forum made with laravel
 
-Database schema:
-   
-   Section
-    Topic
-     Post
+The forum's architecture is as follow:
+Section / Topic / Post
      
-Commands:
-Launch the server:
-
-php artisan serve --port=8080
+I recommend to seed the database before using the forum.
+Seeding the database create a user named "Tony" with the password "secret", you can use it to test the forum.
+Every have "secret" as password.
